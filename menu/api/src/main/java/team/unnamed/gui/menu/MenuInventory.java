@@ -1,7 +1,6 @@
 package team.unnamed.gui.menu;
 
-import org.bukkit.event.inventory.InventoryCloseEvent;
-import org.bukkit.event.inventory.InventoryOpenEvent;
+import org.bukkit.inventory.Inventory;
 
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -19,14 +18,22 @@ public interface MenuInventory {
 
     @NotNull List<ItemClickable> getItems();
 
-    @Nullable Predicate<InventoryOpenEvent> getOpenAction();
+    @Nullable Predicate<Inventory> getOpenAction();
 
-    @Nullable Predicate<InventoryCloseEvent> getCloseAction();
+    @Nullable Predicate<Inventory> getCloseAction();
 
     boolean canIntroduceItems();
 
     default @Nullable ItemClickable getItem(int slot) {
         return getItems().get(slot);
+    }
+
+    static MenuInventoryBuilder builder(String title) {
+        return new DefaultMenuInventoryBuilder(title);
+    }
+
+    static MenuInventoryBuilder builder(String title, int rows) {
+        return new DefaultMenuInventoryBuilder(title, rows);
     }
 
 }

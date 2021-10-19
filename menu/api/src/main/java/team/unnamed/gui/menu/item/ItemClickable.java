@@ -1,18 +1,17 @@
 package team.unnamed.gui.menu.item;
 
-import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.inventory.ItemStack;
 
-import java.util.function.Predicate;
+import team.unnamed.gui.menu.item.action.ItemClickableAction;
 
 public class ItemClickable {
 
     private final int slot;
     private final ItemStack itemStack;
-    private final Predicate<InventoryClickEvent> action;
+    private final ItemClickableAction action;
 
     private ItemClickable(int slot, ItemStack itemStack,
-                          Predicate<InventoryClickEvent> action) {
+                          ItemClickableAction action) {
         this.slot = slot;
         this.itemStack = itemStack;
         this.action = action;
@@ -26,7 +25,7 @@ public class ItemClickable {
         return itemStack;
     }
 
-    public Predicate<InventoryClickEvent> getAction() {
+    public ItemClickableAction getAction() {
         return action;
     }
 
@@ -34,21 +33,25 @@ public class ItemClickable {
         return new ItemClickable(slot, itemStack, action);
     }
 
-    public static ItemClickable item(ItemStack itemStack) {
-        return onlyItem(itemStack, event -> true);
+    public static ItemClickable onlyItem(ItemStack itemStack) {
+        return onlyItem(itemStack, ItemClickableAction.CANCEL_GLOBAL_ACTION);
     }
 
-    public static ItemClickable onlyItem(ItemStack itemStack, Predicate<InventoryClickEvent> action) {
+    public static ItemClickable onlyItem(ItemStack itemStack, ItemClickableAction action) {
         return of(-1, itemStack, action);
     }
 
     public static ItemClickable of(int slot, ItemStack itemStack) {
-        return of(slot, itemStack, event -> true);
+        return of(slot, itemStack, ItemClickableAction.CANCEL_GLOBAL_ACTION);
     }
 
     public static ItemClickable of(int slot, ItemStack itemStack,
-                                   Predicate<InventoryClickEvent> action) {
+                                   ItemClickableAction action) {
         return new ItemClickable(slot, itemStack, action);
+    }
+
+    public static ItemClickableBuilder builder(int slot) {
+        return new ItemClickableBuilder(slot);
     }
 
 }

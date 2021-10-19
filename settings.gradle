@@ -5,3 +5,6 @@ include ':menu:api'
 ['v1_8_R3'].forEach {
 	include(":menu:runtime:adapt-$it")
 }
+include 'menu:plugin'
+findProject(':menu:plugin')?.name = 'plugin'
+
