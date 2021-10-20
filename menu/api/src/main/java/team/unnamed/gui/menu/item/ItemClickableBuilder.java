@@ -3,14 +3,14 @@ package team.unnamed.gui.menu.item;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 
-import team.unnamed.gui.menu.item.action.GlobalItemClickableAction;
 import team.unnamed.gui.menu.item.action.ItemClickableAction;
 import team.unnamed.gui.menu.item.action.ItemClickableActionBuilder;
 
 import java.util.function.Consumer;
 import java.util.function.Predicate;
 
-import static team.unnamed.gui.menu.util.Validate.isNotNull;
+import static team.unnamed.validate.Validate.isNotNull;
+
 
 public class ItemClickableBuilder {
 

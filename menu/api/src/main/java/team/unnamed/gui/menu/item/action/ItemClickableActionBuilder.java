@@ -7,7 +7,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.function.Predicate;
 
-import static team.unnamed.gui.menu.util.Validate.isNotNull;
+import static team.unnamed.validate.Validate.isNotNull;
 
 public class ItemClickableActionBuilder {
 

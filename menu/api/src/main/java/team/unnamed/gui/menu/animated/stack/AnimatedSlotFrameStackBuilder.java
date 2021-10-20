@@ -5,7 +5,7 @@ import team.unnamed.gui.menu.animated.frame.AnimatedSlotFrame;
 import java.util.ArrayList;
 import java.util.List;
 
-import static team.unnamed.gui.menu.util.Validate.isNotNull;
+import static team.unnamed.validate.Validate.isNotNull;
 
 public class AnimatedSlotFrameStackBuilder {
 

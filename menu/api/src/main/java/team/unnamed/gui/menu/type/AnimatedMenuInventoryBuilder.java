@@ -6,10 +6,9 @@ import team.unnamed.gui.menu.animated.frame.AnimatedSlotFrame;
 import team.unnamed.gui.menu.animated.stack.AnimatedSlotFrameStack;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
-import static team.unnamed.gui.menu.util.Validate.isNotNull;
+import static team.unnamed.validate.Validate.isNotNull;
 
 public class AnimatedMenuInventoryBuilder
         extends MenuInventoryBuilderLayout<AnimatedMenuInventoryBuilder> {
@@ -42,7 +41,7 @@ public class AnimatedMenuInventoryBuilder
         }
 
         return super.internalBuild(new AnimatedMenuInventory(
-                title, slots, Arrays.asList(items),
+                title, slots, items,
                 openAction, closeAction, canIntroduceItems,
                 frameStacks
         ));
