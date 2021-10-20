@@ -19,7 +19,7 @@ public class AnimatedMenuInventoryCreator
     @Override
     public Inventory create(Player player, Object... data) {
         return MenuInventory.newAnimatedBuilder("Testing")
-                .addFrameStack(AnimatedSlotFrameStack.builder(22)
+                .addFrameStack(AnimatedSlotFrameStack.newBuilder(22)
                         .setLoops(-1)
                         .addFrame(AnimatedSlotFrame.create(
                                 ItemClickable.onlyItem(
@@ -42,7 +42,7 @@ public class AnimatedMenuInventoryCreator
                                 20
                         ))
                         .build())
-                .addFrameStack(AnimatedSlotFrameStack.builder(Slots.getBorderSlots(6))
+                .addFrameStack(AnimatedSlotFrameStack.newBuilder(Slots.getBorderSlots(6))
                         .setLoops(-1)
                         .addFrame(AnimatedSlotFrame.create(
                                 ItemClickable.onlyItem(new ItemStack(Material.STAINED_GLASS_PANE, 1, (byte) 14)),
