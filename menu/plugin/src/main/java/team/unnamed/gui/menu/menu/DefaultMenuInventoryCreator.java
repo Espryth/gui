@@ -14,7 +14,7 @@ public class DefaultMenuInventoryCreator
 
     @Override
     public Inventory create(Player player, Object... data) {
-        return MenuInventory.builder("Test")
+        return MenuInventory.newBuilder("Test")
                 .fillBorders(ItemClickable.onlyItem(new ItemStack(Material.STAINED_GLASS_PANE)))
                 .addItem(ItemClickable.builder(22)
                         .setItem(new ItemStack(Material.ENDER_PEARL))

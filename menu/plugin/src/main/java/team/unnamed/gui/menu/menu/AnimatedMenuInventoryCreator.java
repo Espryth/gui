@@ -18,7 +18,7 @@ public class AnimatedMenuInventoryCreator
 
     @Override
     public Inventory create(Player player, Object... data) {
-        return MenuInventory.animatedBuilder("Testing")
+        return MenuInventory.newAnimatedBuilder("Testing")
                 .addFrameStack(AnimatedSlotFrameStack.builder(22)
                         .setLoops(-1)
                         .addFrame(AnimatedSlotFrame.create(

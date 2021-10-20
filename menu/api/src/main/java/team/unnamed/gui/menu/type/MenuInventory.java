@@ -18,6 +18,8 @@ public interface MenuInventory {
 
     @NotNull List<ItemClickable> getItems();
 
+    void clearItems();
+
     void setItem(ItemClickable item);
 
     void removeItem(int slot);
@@ -32,20 +34,36 @@ public interface MenuInventory {
         return getItems().get(slot);
     }
 
-    static MenuInventoryBuilder builder(String title) {
+    static MenuInventoryBuilder newBuilder(String title) {
         return new DefaultMenuInventoryBuilder(title);
     }
 
-    static MenuInventoryBuilder builder(String title, int rows) {
+    static MenuInventoryBuilder newBuilder(String title, int rows) {
         return new DefaultMenuInventoryBuilder(title, rows);
     }
 
-    static AnimatedMenuInventoryBuilder animatedBuilder(String title) {
+    static AnimatedMenuInventoryBuilder newAnimatedBuilder(String title) {
         return new AnimatedMenuInventoryBuilder(title);
     }
 
-    static AnimatedMenuInventoryBuilder animatedBuilder(String title, int rows) {
+    static AnimatedMenuInventoryBuilder newAnimatedBuilder(String title, int rows) {
         return new AnimatedMenuInventoryBuilder(title, rows);
+    }
+
+    static StringLayoutMenuInventoryBuilder newStringLayoutBuilder(String title) {
+        return new StringLayoutMenuInventoryBuilder(title);
+    }
+
+    static StringLayoutMenuInventoryBuilder newStringLayoutBuilder(String title, int rows) {
+        return new StringLayoutMenuInventoryBuilder(title, rows);
+    }
+
+    static <E> PaginatedMenuInventoryBuilder<E> newPaginatedBuilder(Class<E> entityType, String title) {
+        return new PaginatedMenuInventoryBuilder<>(title);
+    }
+
+    static <E> PaginatedMenuInventoryBuilder<E> newPaginatedBuilder(Class<E> entityType, String title, int rows) {
+        return new PaginatedMenuInventoryBuilder<>(title, rows);
     }
 
 }
