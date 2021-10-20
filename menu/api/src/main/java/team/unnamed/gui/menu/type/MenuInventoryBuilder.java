@@ -4,6 +4,7 @@ import org.bukkit.inventory.Inventory;
 
 import team.unnamed.gui.menu.item.ItemClickable;
 
+import java.util.List;
 import java.util.function.Predicate;
 
 public interface MenuInventoryBuilder {
@@ -15,6 +16,8 @@ public interface MenuInventoryBuilder {
     MenuInventoryBuilder fillColumn(ItemClickable item, int column);
 
     MenuInventoryBuilder fillBorders(ItemClickable item);
+
+    MenuInventoryBuilder setItems(List<ItemClickable> items);
 
     MenuInventoryBuilder addItem(ItemClickable item, int... slots);
 

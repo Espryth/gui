@@ -41,6 +41,14 @@ public class ItemClickable {
         return new ItemClickable(this.slot, itemStack, this.action);
     }
 
+    @Override
+    public String toString() {
+        return "ItemClickable{" +
+                "slot=" + slot +
+                ", itemStack=" + itemStack +
+                '}';
+    }
+
     public static ItemClickable onlyItem(ItemStack itemStack) {
         return onlyItem(itemStack, ItemClickableAction.CANCEL_GLOBAL_ACTION);
     }
