@@ -6,6 +6,7 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 import team.unnamed.gui.menu.item.ItemClickable;
+import team.unnamed.gui.menu.util.MenuUtils;
 
 import java.util.List;
 import java.util.function.Predicate;
@@ -47,6 +48,12 @@ public class DefaultMenuInventory implements MenuInventory {
     @Override
     public List<ItemClickable> getItems() {
         return items;
+    }
+
+    @Override
+    public void clearItems() {
+        this.items.clear();
+        MenuUtils.fillItemList(this.items, this.slots);
     }
 
     @Override

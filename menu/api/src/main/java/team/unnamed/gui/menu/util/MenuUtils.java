@@ -4,11 +4,14 @@ import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.InventoryHolder;
 
 import org.jetbrains.annotations.NotNull;
+
+import team.unnamed.gui.menu.item.ItemClickable;
 import team.unnamed.gui.menu.type.MenuInventory;
 import team.unnamed.gui.menu.MenuInventoryWrapper;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
+import java.util.List;
 
 import static team.unnamed.bukkit.ServerVersionUtils.SERVER_VERSION;
 
@@ -30,6 +33,12 @@ public final class MenuUtils {
     private MenuUtils() {
         // the class shouldn't be instantiated
         throw new UnsupportedOperationException();
+    }
+
+    public static void fillItemList(List<ItemClickable> items, int slots) {
+        for (int i = 0; i < slots; i++) {
+            items.add(null);
+        }
     }
 
     public static @NotNull Inventory parseToInventory(MenuInventory menuInventory) {
