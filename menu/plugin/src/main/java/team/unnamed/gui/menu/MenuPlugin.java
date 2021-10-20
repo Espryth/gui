@@ -10,14 +10,17 @@ import team.unnamed.gui.menu.listener.InventoryCloseListener;
 import team.unnamed.gui.menu.listener.InventoryOpenListener;
 import team.unnamed.gui.menu.menu.AnimatedMenuInventoryCreator;
 import team.unnamed.gui.menu.menu.DefaultMenuInventoryCreator;
+import team.unnamed.gui.menu.menu.PaginatedMenuInventoryCreator;
 
 public class MenuPlugin extends JavaPlugin {
 
     private final MenuInventoryCreator defaultInventoryCreator;
+    private final MenuInventoryCreator paginatedInventoryCreator;
     private final MenuInventoryCreator animatedInventoryCreator;
 
     public MenuPlugin() {
         this.defaultInventoryCreator = new DefaultMenuInventoryCreator();
+        this.paginatedInventoryCreator = new PaginatedMenuInventoryCreator();
         this.animatedInventoryCreator = new AnimatedMenuInventoryCreator();
     }
 
@@ -37,6 +40,10 @@ public class MenuPlugin extends JavaPlugin {
                 }
                 case "animated": {
                     player.openInventory(animatedInventoryCreator.create(player));
+                    break;
+                }
+                case "paginated": {
+                    player.openInventory(paginatedInventoryCreator.create(player));
                     break;
                 }
             }
