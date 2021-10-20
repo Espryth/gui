@@ -16,4 +16,8 @@ public interface ItemClickableAction {
         return new ItemClickableActionBuilder();
     }
 
+    static ItemClickableAction globalAction(Predicate<Inventory> action) {
+        return new GlobalItemClickableAction(action);
+    }
+
 }

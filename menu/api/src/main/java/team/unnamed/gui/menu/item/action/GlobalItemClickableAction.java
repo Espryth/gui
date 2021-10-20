@@ -10,7 +10,7 @@ public class GlobalItemClickableAction
 
     private final Predicate<Inventory> action;
 
-    public GlobalItemClickableAction(Predicate<Inventory> action) {
+    protected GlobalItemClickableAction(Predicate<Inventory> action) {
         this.action = action;
     }
 

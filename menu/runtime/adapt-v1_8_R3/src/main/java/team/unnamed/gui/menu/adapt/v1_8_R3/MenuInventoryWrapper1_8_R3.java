@@ -10,7 +10,7 @@ import org.bukkit.inventory.ItemStack;
 
 import org.jetbrains.annotations.NotNull;
 
-import team.unnamed.gui.menu.MenuInventory;
+import team.unnamed.gui.menu.type.MenuInventory;
 import team.unnamed.gui.menu.MenuInventoryWrapper;
 
 import java.util.HashMap;

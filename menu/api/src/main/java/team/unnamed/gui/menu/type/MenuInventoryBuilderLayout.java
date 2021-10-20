@@ -1,4 +1,4 @@
-package team.unnamed.gui.menu;
+package team.unnamed.gui.menu.type;
 
 import org.bukkit.inventory.Inventory;
 import team.unnamed.gui.menu.item.ItemClickable;
@@ -134,11 +134,13 @@ abstract class MenuInventoryBuilderLayout<T extends MenuInventoryBuilder>
 
     @Override
     public Inventory build() {
-        MenuInventory menuInventory = new DefaultMenuInventory(
+        return internalBuild(new DefaultMenuInventory(
                 title, slots, Arrays.asList(items),
                 openAction, closeAction, canIntroduceItems
-        );
+        ));
+    }
 
+    protected Inventory internalBuild(MenuInventory menuInventory) {
         Inventory inventory = MenuUtils.parseToInventory(menuInventory);
 
         for (ItemClickable itemClickable : items) {

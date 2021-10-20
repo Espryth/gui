@@ -1,4 +1,4 @@
-package team.unnamed.gui.menu;
+package team.unnamed.gui.menu.type;
 
 public class DefaultMenuInventoryBuilder
         extends MenuInventoryBuilderLayout<DefaultMenuInventoryBuilder> {

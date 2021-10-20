@@ -1,6 +1,7 @@
-package team.unnamed.gui.menu;
+package team.unnamed.gui.menu.type;
 
 import org.bukkit.inventory.Inventory;
+
 import team.unnamed.gui.menu.item.ItemClickable;
 
 import java.util.function.Predicate;

@@ -4,8 +4,7 @@ import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.InventoryHolder;
 
 import org.jetbrains.annotations.NotNull;
-import org.jetbrains.annotations.Nullable;
-import team.unnamed.gui.menu.MenuInventory;
+import team.unnamed.gui.menu.type.MenuInventory;
 import team.unnamed.gui.menu.MenuInventoryWrapper;
 
 import java.lang.reflect.Constructor;

@@ -1,4 +1,4 @@
-package team.unnamed.gui.menu;
+package team.unnamed.gui.menu.type;
 
 import org.bukkit.inventory.Inventory;
 
@@ -19,11 +19,11 @@ public class DefaultMenuInventory implements MenuInventory {
     protected final Predicate<Inventory> closeAction;
     protected final boolean canIntroduceItems;
 
-    public DefaultMenuInventory(String title, int slots,
-                                List<ItemClickable> items,
-                                Predicate<Inventory> openAction,
-                                Predicate<Inventory> closeAction,
-                                boolean canIntroduceItems) {
+    protected DefaultMenuInventory(String title, int slots,
+                                   List<ItemClickable> items,
+                                   Predicate<Inventory> openAction,
+                                   Predicate<Inventory> closeAction,
+                                   boolean canIntroduceItems) {
         this.title = title;
         this.slots = slots;
         this.items = items;
@@ -47,6 +47,16 @@ public class DefaultMenuInventory implements MenuInventory {
     @Override
     public List<ItemClickable> getItems() {
         return items;
+    }
+
+    @Override
+    public void setItem(ItemClickable item) {
+        this.items.set(item.getSlot(), item);
+    }
+
+    @Override
+    public void removeItem(int slot) {
+        this.items.remove(slot);
     }
 
     @Nullable

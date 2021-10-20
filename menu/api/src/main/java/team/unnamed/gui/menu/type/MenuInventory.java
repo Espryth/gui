@@ -1,4 +1,4 @@
-package team.unnamed.gui.menu;
+package team.unnamed.gui.menu.type;
 
 import org.bukkit.inventory.Inventory;
 
@@ -18,6 +18,10 @@ public interface MenuInventory {
 
     @NotNull List<ItemClickable> getItems();
 
+    void setItem(ItemClickable item);
+
+    void removeItem(int slot);
+
     @Nullable Predicate<Inventory> getOpenAction();
 
     @Nullable Predicate<Inventory> getCloseAction();
@@ -34,6 +38,14 @@ public interface MenuInventory {
 
     static MenuInventoryBuilder builder(String title, int rows) {
         return new DefaultMenuInventoryBuilder(title, rows);
+    }
+
+    static AnimatedMenuInventoryBuilder animatedBuilder(String title) {
+        return new AnimatedMenuInventoryBuilder(title);
+    }
+
+    static AnimatedMenuInventoryBuilder animatedBuilder(String title, int rows) {
+        return new AnimatedMenuInventoryBuilder(title, rows);
     }
 
 }

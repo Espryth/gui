@@ -37,7 +37,7 @@ public class ItemClickableBuilder {
 
     public ItemClickableBuilder setAction(Predicate<Inventory> action) {
         isNotNull(action, "Action cannot be null.");
-        this.action = new GlobalItemClickableAction(action);
+        this.action = ItemClickableAction.globalAction(action);
         return this;
     }
 

@@ -5,7 +5,7 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.inventory.Inventory;
 
-import team.unnamed.gui.menu.MenuInventory;
+import team.unnamed.gui.menu.type.MenuInventory;
 import team.unnamed.gui.menu.MenuInventoryWrapper;
 import team.unnamed.gui.menu.item.ItemClickable;
 import team.unnamed.gui.menu.item.action.ItemClickableAction;
