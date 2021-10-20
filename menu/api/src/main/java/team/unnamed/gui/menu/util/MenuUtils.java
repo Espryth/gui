@@ -10,7 +10,7 @@ import team.unnamed.gui.menu.MenuInventoryWrapper;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
 
-import static team.unnamed.gui.menu.util.VersionUtils.SERVER_VERSION;
+import static team.unnamed.bukkit.ServerVersionUtils.SERVER_VERSION;
 
 public final class MenuUtils {
 

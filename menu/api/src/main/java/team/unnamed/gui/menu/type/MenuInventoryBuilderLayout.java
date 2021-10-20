@@ -7,8 +7,8 @@ import team.unnamed.gui.menu.util.MenuUtils;
 import java.util.Arrays;
 import java.util.function.Predicate;
 
-import static team.unnamed.gui.menu.util.Validate.isNotNull;
-import static team.unnamed.gui.menu.util.Validate.isState;
+import static team.unnamed.validate.Validate.isNotNull;
+import static team.unnamed.validate.Validate.isState;
 
 abstract class MenuInventoryBuilderLayout<T extends MenuInventoryBuilder>
         implements MenuInventoryBuilder {
