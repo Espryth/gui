@@ -30,7 +30,15 @@ public class ItemClickable {
     }
 
     public ItemClickable clone(int slot) {
-        return new ItemClickable(slot, itemStack, action);
+        return new ItemClickable(slot, this.itemStack, this.action);
+    }
+
+    public ItemClickable clone(ItemClickableAction action) {
+        return new ItemClickable(this.slot, this.itemStack, action);
+    }
+
+    public ItemClickable clone(ItemStack itemStack) {
+        return new ItemClickable(this.slot, itemStack, this.action);
     }
 
     public static ItemClickable onlyItem(ItemStack itemStack) {
