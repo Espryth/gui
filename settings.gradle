@@ -1,10 +1,11 @@
 rootProject.name = 'gui'
 
-include ':menu:api'
+include ':item:api'
+
+['api', 'plugin'].forEach {
+    include(":menu:$it")
+}
 
 ['v1_8_R3'].forEach {
 	include(":menu:runtime:adapt-$it")
 }
-include 'menu:plugin'
-findProject(':menu:plugin')?.name = 'plugin'
-
