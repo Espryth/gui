@@ -7,11 +7,9 @@ import org.bukkit.event.inventory.InventoryType;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.InventoryHolder;
 import org.bukkit.inventory.ItemStack;
-
 import org.jetbrains.annotations.NotNull;
-
+import team.unnamed.gui.menu.adapt.MenuInventoryWrapper;
 import team.unnamed.gui.menu.type.MenuInventory;
-import team.unnamed.gui.menu.MenuInventoryWrapper;
 
 import java.util.HashMap;
 import java.util.List;
@@ -210,12 +208,14 @@ public class MenuInventoryWrapper1_8_R3
         return this;
     }
 
-    @Override @NotNull
+    @Override
+    @NotNull
     public Inventory getRawInventory() {
         return this;
     }
 
-    @Override @NotNull
+    @Override
+    @NotNull
     public MenuInventory getMenuInventory() {
         return menuInventory;
     }
