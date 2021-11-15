@@ -1,5 +1,6 @@
 dependencies {
 	api 'org.jetbrains:annotations:22.0.0'
+    api project(":menu:runtime")
 
     ['validation', 'bukkit'].forEach {
         api "team.unnamed.common:commons-$it:2.0.0"
