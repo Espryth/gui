@@ -7,7 +7,7 @@ import org.jetbrains.annotations.NotNull;
 
 import team.unnamed.gui.menu.item.ItemClickable;
 import team.unnamed.gui.menu.type.MenuInventory;
-import team.unnamed.gui.menu.MenuInventoryWrapper;
+import team.unnamed.gui.menu.adapt.MenuInventoryWrapper;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
