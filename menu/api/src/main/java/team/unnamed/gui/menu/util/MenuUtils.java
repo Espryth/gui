@@ -2,12 +2,10 @@ package team.unnamed.gui.menu.util;
 
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.InventoryHolder;
-
 import org.jetbrains.annotations.NotNull;
-
+import team.unnamed.gui.menu.MenuInventoryWrapper;
 import team.unnamed.gui.menu.item.ItemClickable;
 import team.unnamed.gui.menu.type.MenuInventory;
-import team.unnamed.gui.menu.adapt.MenuInventoryWrapper;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
@@ -45,7 +43,7 @@ public final class MenuUtils {
         try {
             MenuInventoryWrapper wrapper
                     = (MenuInventoryWrapper) WRAPPER_CONSTRUCTOR.newInstance(
-                            null, menuInventory);
+                    null, menuInventory);
 
             return wrapper.getRawInventory();
         } catch (InstantiationException | IllegalAccessException | InvocationTargetException e) {

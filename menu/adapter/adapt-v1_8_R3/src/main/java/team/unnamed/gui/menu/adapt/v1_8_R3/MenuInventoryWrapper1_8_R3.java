@@ -8,7 +8,7 @@ import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.InventoryHolder;
 import org.bukkit.inventory.ItemStack;
 import org.jetbrains.annotations.NotNull;
-import team.unnamed.gui.menu.adapt.MenuInventoryWrapper;
+import team.unnamed.gui.menu.MenuInventoryWrapper;
 import team.unnamed.gui.menu.type.MenuInventory;
 
 import java.util.HashMap;
