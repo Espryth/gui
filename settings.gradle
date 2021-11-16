@@ -2,10 +2,10 @@ rootProject.name = 'gui'
 
 include ':item:api'
 
-['api', 'plugin', 'runtime'].forEach {
+['api', 'plugin', 'adapter'].forEach {
     include(":menu:$it")
 }
 
 ['v1_8_R3'].forEach {
-	include(":menu:runtime:adapt-$it")
+	include(":menu:adapter:adapt-$it")
 }

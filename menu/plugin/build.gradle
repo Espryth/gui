@@ -8,6 +8,6 @@ dependencies {
     implementation project(':item:api')
 
     ['1_8_R3'].forEach {
-        runtimeOnly project(":menu:runtime:adapt-v$it")
+        runtimeOnly project(":menu:adapter:adapt-v$it")
     }
 }
