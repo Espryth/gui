@@ -1,10 +1,13 @@
-plugins {
-    `maven-publish`
-}
-
 subprojects {
     apply(plugin = "java-library")
     apply(plugin = "maven-publish")
+
+    // most subprojects will use Java 8
+    configure<JavaPluginExtension> {
+        toolchain {
+            languageVersion.set(JavaLanguageVersion.of(8))
+        }
+    }
 
     configure<PublishingExtension> {
         repositories {
