@@ -24,6 +24,7 @@ subprojects {
                 }
             }*/
         }
+
         publications {
             create<MavenPublication>("maven") {
                 from(components["java"])
@@ -37,5 +38,4 @@ subprojects {
         maven("https://repo.codemc.io/repository/nms/")
         mavenCentral()
     }
-
 }
